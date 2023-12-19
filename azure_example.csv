@@ -1,2 +1,2 @@
-accountId,groupIDs,name,clientId,key,tenantId,servicePrincipalId 
-<subscription_id>,Eurofins,<subscription_name>,<application_id>,<applicaion_secret>,<tenant_id>,<applicaion_object_id>
+accountId,name,clientId,key,tenantId,servicePrincipalId 
+<subscription_id>,<subscription_name>,<application_id>,<applicaion_secret>,<tenant_id>,<applicaion_object_id>

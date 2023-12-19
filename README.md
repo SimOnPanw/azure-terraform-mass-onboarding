@@ -1,6 +1,8 @@
-# Prisma Cloud POV
+# Prisma Cloud Mass Azure Subscription Onboarding
 
-The provider config file is/can be expected at the `.prismacloud_auth.json` file.
+## Credentials for Prisma Cloud
+
+The provider config file expect a `.prismacloud_auth.json` file.
 
 An example config structure can look like:
 ```
@@ -12,16 +14,26 @@ An example config structure can look like:
 }
 ```
 
+## Create the azure.csv 
 
-Unless if you want to put the provider configs in a config file, then export your env var, similar to:
 
 ```
-export PRISMACLOUD_USERNAME=yada_access_key
-export PRISMACLOUD_PASSWORD=yada_secret_key
-export PRISMACLOUD_URL=api.eu.prismacloud.io
-export PRISMACLOUD_PROTOCOL=https
+cp azure_example.csv azure.csv
 ```
 
-Full details at:
-https://registry.terraform.io/providers/PaloAltoNetworks/prismacloud/latest/docs
+Fill the `azure.csv` with the different Azure Subscriptions and the Enterprise Application informations.  
 
+This is the format you should follow:  
+
+```csv
+accountId,name,clientId,key,tenantId,servicePrincipalId 
+<subscription_id>,<subscription_name>,<application_id>,<applicaion_secret>,<tenant_id>,<applicaion_object_id>
+```
+
+## Execute the terraform script
+
+```
+terraform apply
+terraform plan
+terraform apply
+```

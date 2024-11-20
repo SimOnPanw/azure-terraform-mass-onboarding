@@ -28,3 +28,4 @@ terraform.rc
 
 .prismacloud_auth.json
 azure.csv
+*.lock.hcl

@@ -17,10 +17,6 @@ This Terraform script automates the onboarding of multiple Azure subscriptions t
   - [1. Initialize Terraform](#1-initialize-terraform)
   - [2. Review the Terraform Plan](#2-review-the-terraform-plan)
   - [3. Apply the Terraform Configuration](#3-apply-the-terraform-configuration)
-- [Verification](#verification)
-- [Troubleshooting](#troubleshooting)
-- [Cleanup](#cleanup)
-- [Additional Resources](#additional-resources)
 
 ## Setup
 
@@ -57,17 +53,17 @@ accountId,name,clientId,key,tenantId,servicePrincipalId
 <subscription_id>,<subscription_name>,<application_id>,<application_secret>,<tenant_id>,<application_object_id>
 ```
 
-**accountId**: Azure Subscription ID.
-**name**: Name of the Azure Subscription.
-**clientId**: Application (client) ID of the Enterprise Application.
-**key**: Client secret of the Enterprise Application.
-**tenantId**: Azure Active Directory Tenant ID.
-**servicePrincipalId**: Object ID of the Enterprise Application.
+- **accountId**: Azure Subscription ID.
+- **name**: Name of the Azure Subscription.
+- **clientId**: Application (client) ID of the Enterprise Application.
+- **key**: Client secret of the Enterprise Application.
+- **tenantId**: Azure Active Directory Tenant ID.
+- **servicePrincipalId**: Object ID of the Enterprise Application.
 
 Important: Ensure there are no extra spaces or line breaks in the CSV file.
 
-### Execution
-#### 1. Initialize Terraform
+## Execution
+### 1. Initialize Terraform
 
 Initialize the Terraform working directory:
 
@@ -75,7 +71,7 @@ Initialize the Terraform working directory:
 terraform init
 ```
 
-#### 2. Review the Terraform Plan
+### 2. Review the Terraform Plan
 Review the actions Terraform will perform:
 
 ```bash
